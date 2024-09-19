@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-  </head>
-  <body>
-    <main>
-      <h3> Hello world</h3>
-    </main>
-  </body>
+
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    .font-montserrat {
+      font-family: "Montserrat"
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container mx-auto">
+    <header class="flex flex-row items-center justify-between p-4">
+      <h3 class="font-bold font-montserrat text-3xl"> COMPANY. </h3>
+      <nav class="flex flex-row font-montserrat gap-4 font-bold text-2xl">
+        <div class="p-4"> Demo </div>
+        <div class="p-4"> How it works </div>
+        <div class="p-4"> Intergretions </div>
+        <div class="p-4"> Pricing </div>
+        <div class="bg-[#3534d2] text-white p-4 rounded-md"> Get Started </div>
+      </nav>
+    </header>
+    <section class="flex flex-row mt-10">
+      <div class="flex-1"> 
+      </div class="text-6xl font-bold" grow  >
+      <div class="flex-1">
+
+        <img src="./public/assets/gambar.svg">
+      </div>
+    </section>
+  </div>
+</body>
+
 </html>
