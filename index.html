@@ -108,19 +108,22 @@
     </section>
 <!-- Our Services-->
       <section class="bg-[#3534d2]">
-        <div class="container mx-auto">
-            <div class="flex flex-col text-white font-montserrat pt-8 pb-8">
+        <div class="container mx-auto h-full text-white py-12 Montserrat">
+          <form id="wa-form">
+            <div class="flex flex-col gap-4">
               <h3 class="text-center text-2xl font-bold"> Get In Touch</h3>
 
               <div class="pt-8">
                 <h4 class="text-center text-xl"> Enter your WA Number</h4>
                 <div class="flex pt-4 gap-2 items-center justify-center text-xl">
                   <div> +62 </div>
-                  <input type="text" class="max-w-[400px] w-full p-2 text-[#3534d2]">
+                  <input type="text" id="phone-number" class="max-w-[400px] w-full p-2 text-[#3534d2]">
                 </div>
-                <div class=" mx-auto mt-6 text-[#3534d2] bg-white max-w-40 text-center p-4 rounded-md font-montserrat text-2xl hover:bg-opacity-50 cursor-pointer font-bold">
+                <button type="submit"
+                        class=" mx-auto mt-6 text-[#3534d2] bg-white max-w-40 text-center p-4 rounded-md font-montserrat text-2xl hover:bg-opacity-50 cursor-pointer font-bold">
                   Submit
-                </div>
+                </button>
+          </form>
                 </div>
               </div>
             </div>
@@ -132,13 +135,20 @@
   src="https://code.jquery.com/jquery-3.7.1.min.js"
   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
   crossorigin="anonymous"></script>
-
+  
   <script>
     //DOM selector
     // event on click
   $("#ham-navi").click(function (){
     //alert("hello word")
       $("#menu").toggleClass("hidden")
+  })
+
+  $("#wa-form").submit(function(e){
+       e.preventDefault();
+        var phone = $("#phone-number").val();
+
+        window.location.href ="https://wa.me/62" + phone
   })
     
   </script>
